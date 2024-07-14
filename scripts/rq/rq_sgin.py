@@ -75,9 +75,11 @@ class RqSgin:
                   return
               ## 判断验证码是否错误
               elif status == 10011:
+                  notify.send("RQ签到任务", "验证码错误")
                   pass
               ## 判断是否已经签到了
               elif status == 10009:
+                  notify.send("RQ签到任务", "今日已签到过了！！！")
                   return
               i+=1
               time.sleep(1)
